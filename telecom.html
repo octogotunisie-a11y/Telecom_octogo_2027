@@ -584,7 +584,7 @@
         letter-spacing: 0.22em;
         color: var(--or2);
       }
-           .image-placeholder {
+     .image-placeholder {
   width: 100%;
   aspect-ratio: 1 / 1;
   min-height: 220px;
@@ -615,8 +615,7 @@
 
   border-radius: 14px;
 }
-
-.image-placeholder img[src]:not([src=""]) {
+     .image-placeholder img[src]:not([src=""]) {
   display: block;
 }
 
@@ -3972,6 +3971,72 @@
           padding: 22px 22px 26px;
         }
       }
+      /* ================= CERTIFICATIONS ISO (section additionnelle, secteur Industrie) ================= */
+      .iso-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 30px;
+      }
+      .iso-card {
+        background: var(--carte);
+        border: 1px solid var(--hair);
+        border-radius: 12px;
+        padding: 16px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        transition: border-color 0.18s;
+      }
+      .iso-card:hover {
+        border-color: color-mix(in srgb, var(--or) 45%, var(--hair));
+      }
+      .iso-code {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--or2);
+      }
+      .iso-code small {
+        font-family: inherit;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--gris);
+        margin-left: 4px;
+      }
+      .iso-lib {
+        font-size: 13px;
+        color: var(--gris);
+        line-height: 1.5;
+      }
+      .iso-sub {
+        margin-top: 38px;
+        padding-top: 30px;
+        border-top: 1px solid var(--hair);
+        max-width: 70ch;
+      }
+      .iso-sub h3 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 600;
+        font-size: 19px;
+        color: var(--head);
+        margin: 0;
+      }
+      .iso-list {
+        margin: 14px 0 0;
+        padding-left: 20px;
+      }
+      .iso-list li {
+        margin: 8px 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--gris);
+      }
+      @media (max-width: 520px) {
+        .iso-grid {
+          grid-template-columns: 1fr;
+        }
+      }
       .metiers-in {
         max-width: var(--wrap);
         margin: 0 auto;
@@ -4290,16 +4355,16 @@
         <div class="hero-in">
           <div class="hero-txt">
             <div class="hero-eyebrow">
-              Plateforme de formation & de performance —
-              <span class="hero-eyebrow-secteur">Édition TÉLÉCOM</span>
+              OCTOGO |
+              <span class="hero-eyebrow-secteur"
+                >DANS LE CERVEAU D&#x27;UN RÉSEAU</span
+              >
+              — Édition TÉLÉCOM
             </div>
-            <h1>
-              Transformer l'entraînement<br /><span>en performance.</span>
-            </h1>
+            <h1>Le réseau ne dort jamais.<br /><span>Le cerveau, si.</span></h1>
             <p class="hero-sub">
-              Une méthode conçue pour transformer l'entraînement de vos équipes
-              du secteur Télécom en performance durable, grâce à la pratique, à
-              la mesure et à un cadre neuroscientifique unique — le simplexe.
+              Synchroniser les équipes. Préserver l&#x27;attention. Répondre
+              dans l&#x27;instant. Maintenir la qualité du lien.
             </p>
             <div class="hero-cta">
               <button type="button" class="btn-primary" id="btn-rdv">
@@ -4420,11 +4485,8 @@
 
       <section class="feature feature-alt" id="composer-trivium">
         <div class="feature-in">
-          <div class="feature-art feature-art-duo">
+          <div class="feature-art">
             <div class="image-placeholder"><img src="3.jpg" alt="" /></div>
-            <div class="feature-illustration">
-              
-            </div>
           </div>
           <div class="feature-txt">
             <div class="fil">— Parcours fondateur</div>
@@ -5160,6 +5222,13 @@
       const D = /* DONNÉES DE L'ÉDITION */ {
         secteur: "Télécom",
         annee: 2027,
+        hero: {
+          titre: "OCTOGO | DANS LE CERVEAU D'UN RÉSEAU",
+          l1: "Le réseau ne dort jamais.",
+          l2: "Le cerveau, si.",
+          texte:
+            "Synchroniser les équipes. Préserver l'attention. Répondre dans l'instant. Maintenir la qualité du lien.",
+        },
         fonctionsLabel: "Six métiers des télécoms",
         calendrier:
           "calendrier de l'opérateur (campagnes commerciales, pics d'incidents réseau, clôtures, audits)",
